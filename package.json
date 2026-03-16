@@ -7,29 +7,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:seed": "tsx lib/seed.ts",
-    "db:reset": "node -e \"try{require('fs').rmSync('data/survey.db',{force:true});}catch(e){}\" && tsx lib/seed.ts"
+    "db:reset": "node -e \"try{require('fs').rmSync('data/design-requests.db',{force:true});}catch(e){}\""
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.78.0",
-    "better-sqlite3": "^12.6.2",
+    "better-sqlite3": "^12.8.0",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.577.0",
-    "next": "16.1.6",
-    "qrcode.react": "^4.2.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "recharts": "^3.8.0",
-    "swr": "^2.4.1"
+    "next": "^14.2.32",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-image-crop": "^11.0.10"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.32",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"
