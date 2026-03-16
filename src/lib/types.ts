@@ -21,6 +21,12 @@ export interface Brief {
   revision_count?: number;
 }
 
+export interface SelectedBriefField {
+  field_type_id: number;
+  field_name: string;
+  content: string;
+}
+
 export interface BriefField {
   id: number;
   brief_id: number;

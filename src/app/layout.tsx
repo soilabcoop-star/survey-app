@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
-import Sidebar from '@/components/Sidebar';
-import { Toaster } from '@/components/ui/toaster';
+import { ToastProvider } from '@/components/ui/toaster';
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ['latin'],
@@ -22,11 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={notoSansKr.className}>
-        <div className="flex min-h-screen bg-transparent">
-          <Sidebar />
-          <main className="flex-1 overflow-auto p-6 md:p-8">{children}</main>
-        </div>
-        <Toaster />
+        <ToastProvider>{children}</ToastProvider>
       </body>
     </html>
   );
